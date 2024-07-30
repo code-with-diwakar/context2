@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import AddTodo from './components/AddTodo';
+import Todos from './components/Todos';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-blue-50 p-8">
+      <div className="container mx-auto shadow-lg rounded-lg overflow-hidden">
+        <div className="bg-gradient-to-r from-indigo-500 to-purple-700 p-5 shadow">
+          <h1 className="text-4xl font-bold text-center text-white mb-12">
+            To-Do Work
+          </h1>
+        </div>
+        <div className="bg-white p-8">
+          <AddTodo />
+          <Todos />
+        </div>
+      </div>
     </div>
   );
 }
